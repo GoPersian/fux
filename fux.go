@@ -2,6 +2,7 @@ package fux
 
 import (
 	"github.com/gorilla/mux"
+	"log"
 	"net/http"
 )
 
@@ -18,5 +19,5 @@ func New() *Fux {
 }
 
 func (f *Fux) Run(port string) {
-	http.ListenAndServe(port, f.Router)
+	log.Fatalln(http.ListenAndServe(port, f.Router))
 }
