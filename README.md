@@ -23,3 +23,12 @@ func main() {
 }
 ```
 
+Paths can have variables. They are defined using the format {name} or {name:pattern}. If a regular expression pattern is not defined, the matched variable will be anything until the next slash. For example:
+
+```go
+f := fux.New()
+f.Get("/products/{key}", ProductHandler)
+f.Get("/articles/{category}/", ArticlesCategoryHandler)
+f.Get("/articles/{category}/{id:[0-9]+}", ArticleHandler)
+f.Run(":8080")
+```
