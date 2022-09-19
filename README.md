@@ -11,7 +11,7 @@ Install with
     go get -u github.com/kamandlou/fux
 ```
 
-## Usage/Examples
+## Examples
 
 ```go
 func main() {
