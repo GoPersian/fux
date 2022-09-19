@@ -1,7 +1,7 @@
 
 # Fux
 
-An interface for works with [gorilla mux](https://github.com/gorilla/mux)
+An interface for works with [Gorilla mux](https://github.com/gorilla/mux)
 
 ## Installation
 
