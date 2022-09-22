@@ -3,6 +3,10 @@
 
 An interface for works with [Gorilla mux](https://github.com/gorilla/mux)
 
+
+* [Installation](#installation)
+* [Examples](#examples)
+
 ## Installation
 
 Install with
