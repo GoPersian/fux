@@ -12,7 +12,7 @@ An interface for works with [Gorilla mux](https://github.com/gorilla/mux)
 Install with
 
 ```bash
-    go get -u github.com/kamandlou/fux
+go get -u github.com/kamandlou/fux
 ```
 
 ## Examples
@@ -44,3 +44,4 @@ func ArticlesCategoryHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "Category: %v\n", vars["category"])
 }
 ```
+And this is all you need to know about the basic usage. More advanced options are explained below.
