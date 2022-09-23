@@ -21,3 +21,7 @@ func New() *Fux {
 func (f *Fux) Run(port string) {
 	log.Fatalln(http.ListenAndServe(port, f.Router))
 }
+
+func Vars(request *http.Request) map[string]string {
+	return mux.Vars(request)
+}

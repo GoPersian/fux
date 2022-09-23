@@ -39,7 +39,7 @@ f.Run(":8080")
 The names are used to create a map of route variables which can be retrieved calling mux.Vars():
 ```go
 func ArticlesCategoryHandler(w http.ResponseWriter, r *http.Request) {
-    vars := mux.Vars(r)
+    vars := fux.Vars(r)
     w.WriteHeader(http.StatusOK)
     fmt.Fprintf(w, "Category: %v\n", vars["category"])
 }
