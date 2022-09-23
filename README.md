@@ -42,7 +42,7 @@ func ArticlesCategoryHandler(w http.ResponseWriter, r *http.Request) {
     vars := fux.Vars(r)
     // w.WriteHeader(http.StatusOK)
     fux.Response(w).Status(http.StatusOK)
-fmt.Fprintf(w, "Category: %v\n", vars["category"])
+    fmt.Fprintf(w, "Category: %v\n", vars["category"])
 }
 ```
 And this is all you need to know about the basic usage. More advanced options are explained below.
