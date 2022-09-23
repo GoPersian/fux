@@ -45,3 +45,10 @@ func ArticlesCategoryHandler(w http.ResponseWriter, r *http.Request) {
 }
 ```
 And this is all you need to know about the basic usage. More advanced options are explained below.
+
+It is possible to combine several matchers in a single route:
+```go
+f.Post("/products", ProductsHandler).
+  Host("www.example.com").
+  Schemes("http")
+```
