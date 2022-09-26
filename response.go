@@ -6,6 +6,9 @@ type (
 	ResponseWriter struct {
 		HttpResponseWriter http.ResponseWriter
 	}
+	Header struct {
+		*ResponseWriter
+	}
 )
 
 func Response(w http.ResponseWriter) *ResponseWriter {
@@ -22,4 +25,15 @@ func (w *ResponseWriter) Status(statusCode int) *ResponseWriter {
 func (w *ResponseWriter) ContentTypeJson() *ResponseWriter {
 	w.HttpResponseWriter.Header().Set("Content-Type", "application/json; charset=utf-8")
 	return w
+}
+
+func (w *ResponseWriter) Header() *Header {
+	return &Header{
+		ResponseWriter: w,
+	}
+}
+
+func (h *Header) Add(key, value string) *ResponseWriter {
+	h.ResponseWriter.HttpResponseWriter.Header().Add(key, value)
+	return h.ResponseWriter
 }
