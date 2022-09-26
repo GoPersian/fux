@@ -7,6 +7,7 @@ An interface for works with [Gorilla mux](https://github.com/gorilla/mux)
 * [Installation](#installation)
 * [Examples](#examples)
 * [Handler](#handler)
+* [File Server](#file server)
 
 ## Installation
 
@@ -77,4 +78,11 @@ func UsersHandler(w http.ResponseWriter, request *http.Request)  {
     fux.Response(w).Header().Set("key", "value").ContextTypeHtml().Status(http.StatusOK) 
     // ...
 }
+```
+# File Server
+Example:
+```go
+f := fux.New()
+f.Handle("/", http.FileServer(http.Dir("static")))
+f.Run(":8080")
 ```
