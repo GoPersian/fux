@@ -69,3 +69,12 @@ func UsersHandler(w http.ResponseWriter, request *http.Request)  {
     // ...
 }
 ```
+Set or add custom headers:
+```go
+func UsersHandler(w http.ResponseWriter, request *http.Request)  {
+    fux.Response(w).Header().Add("key", "value").ContentTypeJson().Status(http.StatusOK)
+    // OR
+    fux.Response(w).Header().Set("key", "value").ContextTypeHtml().Status(http.StatusOK) 
+    // ...
+}
+```
