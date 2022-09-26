@@ -18,3 +18,8 @@ func (w *ResponseWriter) Status(statusCode int) *ResponseWriter {
 	w.HttpResponseWriter.WriteHeader(statusCode)
 	return w
 }
+
+func (w *ResponseWriter) ContentTypeJson() *ResponseWriter {
+	w.HttpResponseWriter.Header().Set("Content-Type", "application/json")
+	return w
+}
