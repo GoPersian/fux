@@ -6,6 +6,7 @@ An interface for works with [Gorilla mux](https://github.com/gorilla/mux)
 
 * [Installation](#installation)
 * [Examples](#examples)
+* [Handler](#handler)
 
 ## Installation
 
@@ -56,4 +57,15 @@ f.Post("/products", ProductsHandler).
 Define a route with multi-methods:
 ```go
 f.HandleFunc("/multi", MultiHandler).Methods(http.MethodPost, http.MethodGet)
+```
+
+# Handler
+Set content-type and status:
+```go
+func UsersHandler(w http.ResponseWriter, request *http.Request)  {
+    fux.Response(w).ContentTypeJson().Status(http.StatusOK)
+    // OR
+    fux.Response(w).ContextTypeHtml().Status(http.StatusOK) 
+    // ...
+}
 ```
