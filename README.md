@@ -53,3 +53,7 @@ f.Post("/products", ProductsHandler).
   Host("www.example.com").
   Schemes("http")
 ```
+Define a route with multi-methods:
+```go
+f.HandleFunc("/multi", MultiHandler).Methods(http.MethodPost, http.MethodGet)
+```
