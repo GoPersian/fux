@@ -27,6 +27,11 @@ func (w *ResponseWriter) ContentTypeJson() *ResponseWriter {
 	return w
 }
 
+func (w *ResponseWriter) ContextTypeHtml() *ResponseWriter {
+	w.HttpResponseWriter.Header().Set("Content-Type", "text/html")
+	return w
+}
+
 func (w *ResponseWriter) Header() *Header {
 	return &Header{
 		ResponseWriter: w,
