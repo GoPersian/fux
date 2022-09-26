@@ -7,7 +7,7 @@ An interface for works with [Gorilla mux](https://github.com/gorilla/mux)
 * [Installation](#installation)
 * [Examples](#examples)
 * [Handler](#handler)
-* [File Server](#file server)
+* [File Server](#file-server)
 
 ## Installation
 
