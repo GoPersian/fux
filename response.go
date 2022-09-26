@@ -37,3 +37,8 @@ func (h *Header) Add(key, value string) *ResponseWriter {
 	h.ResponseWriter.HttpResponseWriter.Header().Add(key, value)
 	return h.ResponseWriter
 }
+
+func (h *Header) Set(key, value string) *ResponseWriter {
+	h.ResponseWriter.HttpResponseWriter.Header().Set(key, value)
+	return h.ResponseWriter
+}
