@@ -20,6 +20,6 @@ func (w *ResponseWriter) Status(statusCode int) *ResponseWriter {
 }
 
 func (w *ResponseWriter) ContentTypeJson() *ResponseWriter {
-	w.HttpResponseWriter.Header().Set("Content-Type", "application/json")
+	w.HttpResponseWriter.Header().Set("Content-Type", "application/json; charset=utf-8")
 	return w
 }
