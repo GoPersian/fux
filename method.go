@@ -32,3 +32,7 @@ func (f *Fux) Delete(pattern string, handler Handler) *mux.Route {
 func (f *Fux) HandleFunc(pattern string, handler Handler) *mux.Route {
 	return f.Router.HandleFunc(pattern, handler)
 }
+
+func (f *Fux) Handle(pattern string, handler http.Handler) *mux.Route {
+	return f.Router.Handle(pattern, handler)
+}
