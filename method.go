@@ -36,3 +36,7 @@ func (f *Fux) HandleFunc(pattern string, handler Handler) *mux.Route {
 func (f *Fux) Handle(pattern string, handler http.Handler) *mux.Route {
 	return f.Router.Handle(pattern, handler)
 }
+
+func (f *Fux) FileServer(pattern string, root http.FileSystem) *mux.Route {
+	return f.Handle(pattern, http.FileServer(root))
+}
