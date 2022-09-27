@@ -82,7 +82,7 @@ func UsersHandler(w http.ResponseWriter, request *http.Request)  {
 # File Server
 Example:
 ```go
-f := fux.New()
 f.Handle("/", http.FileServer(http.Dir("static")))
-f.Run(":8080")
+// OR
+f.FileServer("/", http.Dir("static"))
 ```
