@@ -14,7 +14,7 @@ An interface for works with [Gorilla mux](https://github.com/gorilla/mux)
 Install with
 
 ```bash
-go get -u github.com/kamandlou/fux
+go get -u github.com/GoPersian/fux
 ```
 
 ## Examples
