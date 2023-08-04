@@ -1,4 +1,4 @@
-module github.com/kamandlou/fux
+module github.com/GoPersian/fux
 
 go 1.19
 
