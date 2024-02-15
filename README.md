@@ -86,3 +86,5 @@ f.Handle("/", http.FileServer(http.Dir("static")))
 // OR
 f.FileServer("/", http.Dir("static"))
 ```
+
+test 
